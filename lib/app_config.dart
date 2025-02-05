@@ -6,9 +6,7 @@ import 'wallets/crypto_currency/intermediate/frost_currency.dart';
 /// The `part` directive is used to include the generated code from `app_config.g.dart`.
 /// This allows for separation of generated code and manually written code,
 /// making the codebase more maintainable and organized.
-part 
-flutter pub run build_runner build
-;
+part 'app_config.g.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'app_config.dart';
