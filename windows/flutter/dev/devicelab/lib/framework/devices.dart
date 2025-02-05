@@ -1345,6 +1345,11 @@ class FuchsiaDevice extends Device {
 /// Path to the `adb` executable.
 String get adbPath {
   final String? androidHome = Platform.environment['ANDROID_HOME'] ?? Platform.environment['ANDROID_SDK_ROOT'];
+  if (androidHome == null) {
+    throw DeviceException(
+      'Missing ANDROID_HOME or ANDROID_SDK_ROOT environment variable. It should point to the Android SDK directory.'
+    );
+  }
 
   if (androidHome == null) {
     throw DeviceException(
