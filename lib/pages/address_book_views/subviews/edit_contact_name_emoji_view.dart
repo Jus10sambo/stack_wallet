@@ -395,7 +395,7 @@ class _EditContactNameEmojiViewState
                       shouldCopyEmojiWithNull: true,
                       name: nameController.text,
                       emojiChar:
-                          _selectedEmoji == null ? null : _selectedEmoji!.char,
+                          _selectedEmoji?.char,
                     );
                     unawaited(
                       ref.read(addressBookServiceProvider).editContact(

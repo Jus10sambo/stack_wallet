@@ -661,16 +661,16 @@ class _MaterialAppWithThemeState extends ConsumerState<MaterialAppWithTheme>
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             // splashFactory: NoSplash.splashFactory,
-            overlayColor: MaterialStateProperty.all(colorScheme.splash),
-            minimumSize: MaterialStateProperty.all<Size>(const Size(46, 46)),
+            overlayColor: WidgetStateProperty.all(colorScheme.splash),
+            minimumSize: WidgetStateProperty.all<Size>(const Size(46, 46)),
             // textStyle: MaterialStateProperty.all<TextStyle>(
             //     STextStyles.button(context)),
             foregroundColor:
-                MaterialStateProperty.all(colorScheme.buttonTextSecondary),
-            backgroundColor: MaterialStateProperty.all<Color>(
+                WidgetStateProperty.all(colorScheme.buttonTextSecondary),
+            backgroundColor: WidgetStateProperty.all<Color>(
               colorScheme.buttonBackSecondary,
             ),
-            shape: MaterialStateProperty.all<OutlinedBorder>(
+            shape: WidgetStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 // 1000 to be relatively sure it keeps its pill shape
                 borderRadius: BorderRadius.circular(1000),
@@ -686,17 +686,17 @@ class _MaterialAppWithThemeState extends ConsumerState<MaterialAppWithTheme>
             borderRadius:
                 BorderRadius.circular(Constants.size.checkboxBorderRadius),
           ),
-          checkColor: MaterialStateColor.resolveWith(
+          checkColor: WidgetStateColor.resolveWith(
             (state) {
-              if (state.contains(MaterialState.selected)) {
+              if (state.contains(WidgetState.selected)) {
                 return colorScheme.checkboxIconChecked;
               }
               return colorScheme.checkboxBGChecked;
             },
           ),
-          fillColor: MaterialStateColor.resolveWith(
+          fillColor: WidgetStateColor.resolveWith(
             (states) {
-              if (states.contains(MaterialState.selected)) {
+              if (states.contains(WidgetState.selected)) {
                 return colorScheme.checkboxBGChecked;
               }
               return colorScheme.checkboxBorderEmpty;

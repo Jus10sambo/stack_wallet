@@ -91,7 +91,7 @@ class _RecipientState extends ConsumerState<Recipient> {
 
   void _cryptoAmountChanged() async {
     if (!_cryptoAmountChangeLock) {
-      Amount? cryptoAmount = ref.read(pAmountFormatter(widget.coin)).tryParse(
+      final Amount? cryptoAmount = ref.read(pAmountFormatter(widget.coin)).tryParse(
             amountController.text,
           );
       if (ref.read(pRecipient(widget.index))?.amount != null &&

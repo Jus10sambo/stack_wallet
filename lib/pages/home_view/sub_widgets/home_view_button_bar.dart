@@ -56,14 +56,14 @@ class _HomeViewButtonBarState extends ConsumerState<HomeViewButtonBar> {
                     .getPrimaryEnabledButtonStyle(context)!
                     .copyWith(
                       minimumSize:
-                          MaterialStateProperty.all<Size>(const Size(46, 36)),
+                          WidgetStateProperty.all<Size>(const Size(46, 36)),
                     )
                 : Theme.of(context)
                     .extension<StackColors>()!
                     .getSecondaryEnabledButtonStyle(context)!
                     .copyWith(
                       minimumSize:
-                          MaterialStateProperty.all<Size>(const Size(46, 36)),
+                          WidgetStateProperty.all<Size>(const Size(46, 36)),
                     ),
             onPressed: () {
               FocusScope.of(context).unfocus();
@@ -99,14 +99,14 @@ class _HomeViewButtonBarState extends ConsumerState<HomeViewButtonBar> {
                       .getPrimaryEnabledButtonStyle(context)!
                       .copyWith(
                         minimumSize:
-                            MaterialStateProperty.all<Size>(const Size(46, 36)),
+                            WidgetStateProperty.all<Size>(const Size(46, 36)),
                       )
                   : Theme.of(context)
                       .extension<StackColors>()!
                       .getSecondaryEnabledButtonStyle(context)!
                       .copyWith(
                         minimumSize:
-                            MaterialStateProperty.all<Size>(const Size(46, 36)),
+                            WidgetStateProperty.all<Size>(const Size(46, 36)),
                       ),
               onPressed: () async {
                 FocusScope.of(context).unfocus();
@@ -150,14 +150,14 @@ class _HomeViewButtonBarState extends ConsumerState<HomeViewButtonBar> {
                       .getPrimaryEnabledButtonStyle(context)!
                       .copyWith(
                         minimumSize:
-                            MaterialStateProperty.all<Size>(const Size(46, 36)),
+                            WidgetStateProperty.all<Size>(const Size(46, 36)),
                       )
                   : Theme.of(context)
                       .extension<StackColors>()!
                       .getSecondaryEnabledButtonStyle(context)!
                       .copyWith(
                         minimumSize:
-                            MaterialStateProperty.all<Size>(const Size(46, 36)),
+                            WidgetStateProperty.all<Size>(const Size(46, 36)),
                       ),
               onPressed: () async {
                 FocusScope.of(context).unfocus();

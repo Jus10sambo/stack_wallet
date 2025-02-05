@@ -2034,7 +2034,7 @@ class _TransactionV2DetailsViewState
                   width: MediaQuery.of(context).size.width - 32,
                   child: TextButton(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
+                      backgroundColor: WidgetStateProperty.all<Color>(
                         Theme.of(context).extension<StackColors>()!.textError,
                       ),
                     ),

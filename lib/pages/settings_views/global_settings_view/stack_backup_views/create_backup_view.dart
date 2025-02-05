@@ -740,8 +740,9 @@ class _RestoreFromFileViewState extends State<CreateBackupView> {
 
                                     if (mounted) {
                                       // pop encryption progress dialog
-                                      if (!isDesktop)
+                                      if (!isDesktop) {
                                         Navigator.of(context).pop();
+                                      }
 
                                       if (result) {
                                         await showDialog<dynamic>(

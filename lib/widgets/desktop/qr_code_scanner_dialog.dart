@@ -25,7 +25,7 @@ import 'secondary_button.dart';
 class QrCodeScannerDialog extends StatefulWidget {
   final Function(String) onQrCodeDetected;
 
-  QrCodeScannerDialog({
+  const QrCodeScannerDialog({super.key, 
     required this.onQrCodeDetected,
   });
 

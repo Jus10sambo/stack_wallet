@@ -1711,38 +1711,38 @@ class StackColors extends ThemeExtension<StackColors> {
 
   ButtonStyle? getDeleteEnabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               textFieldErrorBG,
             ),
           );
 
   ButtonStyle? getDeleteDisabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               buttonBackSecondaryDisabled,
             ),
           );
 
   ButtonStyle? getPrimaryEnabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               buttonBackPrimary,
             ),
           );
 
   ButtonStyle? getPrimaryDisabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               buttonBackPrimaryDisabled,
             ),
           );
 
   ButtonStyle? getOutlineBlueButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Colors.transparent,
             ),
-            side: MaterialStateProperty.all<BorderSide>(
+            side: WidgetStateProperty.all<BorderSide>(
               BorderSide(
                 color: customTextButtonEnabledText,
               ),
@@ -1751,10 +1751,10 @@ class StackColors extends ThemeExtension<StackColors> {
 
   ButtonStyle? getOutlineBlueButtonDisabledStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Colors.transparent,
             ),
-            side: MaterialStateProperty.all<BorderSide>(
+            side: WidgetStateProperty.all<BorderSide>(
               BorderSide(
                 color: customTextButtonDisabledText,
               ),
@@ -1763,10 +1763,10 @@ class StackColors extends ThemeExtension<StackColors> {
 
   ButtonStyle? getSecondaryEnabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               buttonBackSecondary,
             ),
-            shape: MaterialStateProperty.all(
+            shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 side: BorderSide(
                   color: buttonBackBorderSecondary,
@@ -1779,10 +1779,10 @@ class StackColors extends ThemeExtension<StackColors> {
 
   ButtonStyle? getSecondaryDisabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               buttonBackSecondaryDisabled,
             ),
-            shape: MaterialStateProperty.all(
+            shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 side: BorderSide(
                   color: buttonBackBorderSecondaryDisabled,
@@ -1795,10 +1795,10 @@ class StackColors extends ThemeExtension<StackColors> {
 
   ButtonStyle? getSmallSecondaryEnabledButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               textFieldDefaultBG,
             ),
-            shape: MaterialStateProperty.all(
+            shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 side: BorderSide(
                   color: buttonBackBorderSecondary,
@@ -1811,24 +1811,24 @@ class StackColors extends ThemeExtension<StackColors> {
 
   ButtonStyle? getDesktopMenuButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               popupBG,
             ),
           );
 
   ButtonStyle? getDesktopMenuButtonStyleSelected(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               textFieldDefaultBG,
             ),
           );
 
   ButtonStyle? getDesktopSettingsButtonStyle(BuildContext context) =>
       Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               background,
             ),
-            overlayColor: MaterialStateProperty.all<Color>(
+            overlayColor: WidgetStateProperty.all<Color>(
               Colors.transparent,
             ),
           );

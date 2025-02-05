@@ -2,13 +2,8 @@ part of 'date_picker.dart';
 
 class _SWDatePicker extends StatefulWidget {
   const _SWDatePicker({
-    super.key,
     required this.value,
     required this.config,
-    this.onValueChanged,
-    this.onDisplayedMonthChanged,
-    this.onCancelTapped,
-    this.onOkTapped,
   });
   final List<DateTime?> value;
 
@@ -73,11 +68,10 @@ class _SWDatePickerState extends State<_SWDatePicker> {
         highlightColor: Colors.transparent,
         focusColor: Colors.transparent,
         colorScheme: Theme.of(context).colorScheme.copyWith(
-              background: Theme.of(context).extension<StackColors>()!.popupBG,
               onBackground:
                   Theme.of(context).extension<StackColors>()!.accentColorDark,
               surface: Theme.of(context).extension<StackColors>()!.popupBG,
-              surfaceVariant:
+              surfaceContainerHighest:
                   Theme.of(context).extension<StackColors>()!.popupBG,
               onSurface:
                   Theme.of(context).extension<StackColors>()!.accentColorDark,

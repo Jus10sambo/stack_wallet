@@ -769,7 +769,7 @@ class _ExchangeFormState extends ConsumerState<ExchangeForm> {
             .getAggregateCurrency(
           widget.contract == null ? coin!.ticker : widget.contract!.symbol,
           ExchangeRateType.estimated,
-          widget.contract == null ? null : widget.contract!.address,
+          widget.contract?.address,
         )
             .then((value) {
           if (value != null) {

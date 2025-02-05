@@ -289,7 +289,7 @@ void main() {
         "value": 2,
       }); //Input
 
-      expect(output.toString(), "Instance of \'Output\'");
+      expect(output.toString(), "Instance of 'Output'");
     });
   });
 }

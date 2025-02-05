@@ -314,9 +314,7 @@ class _SendViewState extends ConsumerState<SendView> {
         if (coin is! Epiccash && !_baseFocus.hasFocus) {
           setState(() {
             _calculateFeesFuture = calculateFees(
-              amount == null
-                  ? 0.toAmountAsRaw(fractionDigits: coin.fractionDigits)
-                  : amount,
+              amount ?? 0.toAmountAsRaw(fractionDigits: coin.fractionDigits),
             );
           });
         }

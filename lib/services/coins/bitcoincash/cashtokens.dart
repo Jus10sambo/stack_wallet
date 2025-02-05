@@ -194,22 +194,22 @@ class TokenOutputData {
 final List<int> PREFIX_BYTE = [0xef];
 
 // This function wraps a "normal" output together with token data.
-ParsedOutput wrap_spk(TokenOutputData? token_data, Uint8List script_pub_key) {
+ParsedOutput wrap_spk(TokenOutputData? tokenData, Uint8List scriptPubKey) {
   final ParsedOutput parsedOutput = ParsedOutput();
 
-  if (token_data == null) {
-    parsedOutput.script_pub_key = script_pub_key;
+  if (tokenData == null) {
+    parsedOutput.script_pub_key = scriptPubKey;
     return parsedOutput;
   }
 
   final buf = BytesBuilder();
 
   buf.add(PREFIX_BYTE);
-  buf.add(token_data.serialize());
-  buf.add(script_pub_key);
+  buf.add(tokenData.serialize());
+  buf.add(scriptPubKey);
 
   parsedOutput.script_pub_key = buf.toBytes();
-  parsedOutput.token_data = token_data;
+  parsedOutput.token_data = tokenData;
 
   return parsedOutput;
 }
@@ -219,31 +219,31 @@ ParsedOutput wrap_spk(TokenOutputData? token_data, Uint8List script_pub_key) {
 // and if token data exists, both the output and token data are returned.
 // Note that the data returend in both cases in of ParsedOutput type, which
 // holds both the script pub key and token data.
-ParsedOutput unwrap_spk(Uint8List wrapped_spk) {
+ParsedOutput unwrap_spk(Uint8List wrappedSpk) {
   final ParsedOutput parsedOutput = ParsedOutput();
 
-  if (wrapped_spk.isEmpty || wrapped_spk[0] != PREFIX_BYTE[0]) {
-    parsedOutput.script_pub_key = wrapped_spk;
+  if (wrappedSpk.isEmpty || wrappedSpk[0] != PREFIX_BYTE[0]) {
+    parsedOutput.script_pub_key = wrappedSpk;
     return parsedOutput;
   }
 
-  int read_cursor = 1; // Start after the PREFIX_BYTE
-  final TokenOutputData token_data = TokenOutputData();
+  int readCursor = 1; // Start after the PREFIX_BYTE
+  final TokenOutputData tokenData = TokenOutputData();
 
-  Uint8List wrapped_spk_without_prefix_byte;
+  Uint8List wrappedSpkWithoutPrefixByte;
   try {
     // Deserialize updates read_cursor by the number of bytes read
 
-    wrapped_spk_without_prefix_byte = wrapped_spk.sublist(read_cursor);
+    wrappedSpkWithoutPrefixByte = wrappedSpk.sublist(readCursor);
     final int bytesRead =
-        token_data.deserialize(wrapped_spk_without_prefix_byte);
+        tokenData.deserialize(wrappedSpkWithoutPrefixByte);
 
-    read_cursor += bytesRead;
-    parsedOutput.token_data = token_data;
-    parsedOutput.script_pub_key = wrapped_spk.sublist(read_cursor);
+    readCursor += bytesRead;
+    parsedOutput.token_data = tokenData;
+    parsedOutput.script_pub_key = wrappedSpk.sublist(readCursor);
   } catch (e) {
     // If unable to deserialize, return all bytes as the full scriptPubKey
-    parsedOutput.script_pub_key = wrapped_spk;
+    parsedOutput.script_pub_key = wrappedSpk;
   }
 
   return parsedOutput;

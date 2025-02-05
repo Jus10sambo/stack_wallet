@@ -223,7 +223,9 @@ class PriceAPI {
     final Map<String, Tuple2<Decimal, double>> tokenPrices = {};
 
     if (AppConfig.coins.whereType<Ethereum>().isEmpty ||
-        contractAddresses.isEmpty) return tokenPrices;
+        contractAddresses.isEmpty) {
+      return tokenPrices;
+    }
 
     final externalCalls = Prefs.instance.externalCalls;
     if ((!Logger.isTestEnv && !externalCalls) ||

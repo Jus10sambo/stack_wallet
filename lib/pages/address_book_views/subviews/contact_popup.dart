@@ -163,7 +163,7 @@ class ContactPopUp extends ConsumerWidget {
                                             )!
                                             .copyWith(
                                               minimumSize:
-                                                  MaterialStateProperty.all<
+                                                  WidgetStateProperty.all<
                                                       Size>(const Size(46, 32)),
                                             ),
                                         child: Padding(

@@ -17,6 +17,8 @@
 /// compressedLog : "{name:Transfer|inputs:{_amount:3291036540000000000|_from:0x3a5cc8689d1b0cef2c317bc5c0ad6ce88b27d597|_to:0xc5e81fc2401b8104966637d5334cbce92f01dbf7}}"
 /// transactionHash : "0x5b59559a77fa5f1c70528d41f4fa2e5fa5a00b21fc2f3bc26b208b3062e46333"
 /// transactionIndex : 25
+library;
+
 
 class EthTokenTxDto {
   EthTokenTxDto({

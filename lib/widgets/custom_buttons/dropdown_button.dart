@@ -247,7 +247,7 @@ class _JDropdownIconButtonState<T> extends State<JDropdownIconButton<T>> {
               .extension<StackColors>()!
               .getSecondaryEnabledButtonStyle(context)
               ?.copyWith(
-                shape: MaterialStateProperty.all(
+                shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     side: BorderSide(
                       color: Theme.of(context)

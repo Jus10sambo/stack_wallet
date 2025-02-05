@@ -101,7 +101,7 @@ class _FavoriteWalletsState extends ConsumerState<FavoriteWallets> {
               if (hasFavorites)
                 TextButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
+                    backgroundColor: WidgetStateProperty.all<Color>(
                       Theme.of(context).extension<StackColors>()!.background,
                     ),
                   ),

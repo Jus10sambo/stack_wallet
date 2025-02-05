@@ -26,6 +26,8 @@
 /// v : "0x0"
 /// r : "0xd..."
 /// s : "0x17d...6e6"
+library;
+
 
 class PendingEthTxDto {
   PendingEthTxDto({

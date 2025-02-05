@@ -1081,7 +1081,7 @@ class _NodeFormState extends ConsumerState<NodeForm> {
                         child: Checkbox(
                           fillColor: !shouldBeReadOnly && enableSSLCheckbox
                               ? null
-                              : MaterialStateProperty.all(
+                              : WidgetStateProperty.all(
                                   Theme.of(context)
                                       .extension<StackColors>()!
                                       .checkboxBGDisabled,
@@ -1134,7 +1134,7 @@ class _NodeFormState extends ConsumerState<NodeForm> {
                         child: Checkbox(
                           fillColor: !widget.readOnly
                               ? null
-                              : MaterialStateProperty.all(
+                              : WidgetStateProperty.all(
                                   Theme.of(context)
                                       .extension<StackColors>()!
                                       .checkboxBGDisabled,

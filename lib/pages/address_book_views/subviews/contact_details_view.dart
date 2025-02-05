@@ -294,7 +294,7 @@ class _ContactDetailsViewState extends ConsumerState<ContactDetailsView> {
                             .extension<StackColors>()!
                             .getSecondaryEnabledButtonStyle(context)!
                             .copyWith(
-                              minimumSize: MaterialStateProperty.all<Size>(
+                              minimumSize: WidgetStateProperty.all<Size>(
                                 const Size(46, 32),
                               ),
                             ),
